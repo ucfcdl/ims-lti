@@ -252,7 +252,8 @@ class OutcomeService {
         return result;
       })()).join(','),
       'Content-Type':    'application/xml',
-      'Content-Length':  body.length
+      'Content-Length':  body.length,
+      'User-Agent': process.env.OBO_LTI_GUID ?? 'obojobo.next.server'
     };
   }
 
